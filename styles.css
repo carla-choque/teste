@@ -16,29 +16,35 @@
 
 body {
     background: var(--backgroud);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .clearfix { clear: both; }
 
 .container {
-    width: 700px;
-    height: 700px;
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
     background: linear-gradient(var(--one), var(--two));
-    margin: 100px auto;
+    display: flex;
+    margin: 0 auto;
     box-shadow: 5px 5px 5px 5px #54585d33;
 }
 
 .left-box {
-    width: 35%;
-    float: left;
-    height: 700px;
+    width: 20%;
+    height: 100%;
 }
 
 .right-box {
-    width: 65%;
-    float: left;
+    width: 100%;
+    padding: 20px;
     background-color: var(--white);
-    height: 700px;
+    height: 100%;
     box-shadow: -7px 2px 15px 2px #54585d52;
 }
 
@@ -57,23 +63,25 @@ body {
 }
 
 .content-box {
-    padding: 0px 40px 0px 40px;
+    padding: 0px 60px 0px 60px;
+    /* height: 100%; */
 }
 
-.content-box h2 {
+.content-box .nome {
+    border: none;
     text-transform: uppercase;
     font-weight: 500;
     color: var(--white);
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
 }
 
 .content-box h3 {
-    font-size: 15px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-top: 10px;
+    padding-top: 50px;
     color: var(--white);
     font-weight: 500;
 }
@@ -86,7 +94,7 @@ body {
 }
 
 .p1 {
-    font-size: 13px;
+    font-size: 17px;
     color: var(--white);
     letter-spacing: 1px;
     padding-top: 12px;
@@ -94,7 +102,7 @@ body {
 }
 
 .p2 {
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 5px;
     margin-top: 5px;
     color: var(--white);
@@ -150,16 +158,50 @@ body {
 
 .contact-info {
     padding: 0px 40px 0px 40px;
-    font-size: 12px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding-top: 25px;
+    padding-top: 60px;
     color: var(--white);
     font-weight: 500;
     text-align: center;
 }
 
 .contact-info a {
-    text-decoration: none;
     color: var(--white);
+}
+
+.content-box-dois {
+    padding: 60px 60px 0px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    color: var(--two);
+    padding-left: 10px;
+    border-left: 3px solid var(--one);
+}
+
+h3 {
+    padding-top: 10px;
+    padding-bottom: 7px;
+    color: var(--one);
+}
+
+ul li {
+    list-style: square;
+    color: var(--two)
+}
+
+.education-dates {
+    color: var(--process);
+    font-style: italic;
+}
+
+.qualities {
+    padding-bottom: 100px;
 }
